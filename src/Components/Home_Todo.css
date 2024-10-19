@@ -2,13 +2,13 @@
     margin: 0%;
     padding: 0%;
 }
-.home-container {
-    width: 700px;
-    height: 700px;
-    border: 2px solid white;
+/* .home-container { */
+    /* width: 700px; */
+    /* height: 700px; */
+    /* border: 2px solid white; */
     /* display: grid; */
     /* place-items: center; */
-}
+/* } */
 header {
     margin: 10px 0px;
 
