@@ -9,10 +9,20 @@ function Home_Todo() {
         content:"",
         checked:''
     })
-    const [task ,setTask ] = useState([])
+    // const [task ,setTask ] = useState([]) before process adding data in local storage
+
+    const todoKey = "TodoApp"
+
+    const [task ,setTask ] = useState(() => {
+        const getTodo = localStorage.getItem(todoKey);
+
+        if(!getTodo) return;
+
+        return JSON.parse(getTodo);
+    })
 
     const handleChange = (value) => {
-
+        // setInputData(inputData) before making object state
         setInputData({id:value,content:value,checked:false})
     }
     
@@ -47,6 +57,10 @@ function Home_Todo() {
         setTask(task.filter((item,idx) => idx !== index))
     )
     // passing of handleChecked event 
+
+    // Our TodoApp Setup in LocalStorage
+
+    localStorage.setItem(todoKey,JSON.stringify(task));
 
     const handleCheckedClick = (index) => {
         const updateTask = task.map((item,idx) => {
