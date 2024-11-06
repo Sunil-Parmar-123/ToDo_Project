@@ -3,10 +3,11 @@ import './Home_Todo.css';
 import { MdCheck,MdDeleteForever} from "react-icons/md";
 
 function Task_List({task,checked,handleClick,idx,handleCheckedClick}) {
+  
   return (
     <div className='task-container'>
         <div className="task-content">
-             <div className={checked ?"content-taskline":'content-task'}>
+             <div className={`content-size ${checked ?"content-taskline":'content-task'}`}>
              {task}
              </div>
              <div className='task-icon'>

@@ -13,6 +13,7 @@ function Home_Todo() {
   // const [task ,setTask ] = useState([]) before process adding data in local storage
 
     //   getDataFromLocalStorage
+    console.dir()
 
   const [task, setTask] = useState(getDataFromLocalStorage());
 
@@ -26,6 +27,7 @@ function Home_Todo() {
   };
 
   const handleSubmit = (event) => {
+    console.log(event)
     event.preventDefault();
     const { id, content, checked } = inputData;
 

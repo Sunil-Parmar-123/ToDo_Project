@@ -47,7 +47,7 @@ form {
 /* Task List Style */
 
 .task-container {
-    height: 40px;
+    height: auto;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
@@ -62,7 +62,7 @@ form {
     align-items: center;
     justify-content: space-between;
     width: 400px;
-    height: 100%;
+    height: auto;
     border-radius:40px ;
     padding: 0px 15px;
 }
@@ -107,5 +107,20 @@ button {
  @media only screen and (max-width:450px){
     .home-container {width: 90vw;
    }
-
  }
+.content-size {
+    font-size: 1rem;
+    height: auto;
+    width: 300px;
+    overflow-x: auto;
+}
+.content-size::-webkit-scrollbar {
+    height: 5px;
+}
+.content-size::-webkit-scrollbar-thumb {
+    background: black;
+}
+.content-size::-webkit-scrollbar-thumb:hover {
+    background: rgb(194, 70, 70);
+    cursor: pointer;
+}
